@@ -1,0 +1,29 @@
+
+<main>
+    <div class="banner">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuKpqaXkepdwMxE28VsjRRPfwpzZ0JBEAasg&usqp=CAU" alt="" id="logo">
+        <div>
+            <input type="text" placeholder="Saisir votre login Github" #getLogin>
+            <button (click)="getGithubInfos(getLogin)">Get infos !</button>
+        </div>
+    </div>
+    
+    <img src="./../assets/loading.gif" [class.showLoading]="showLoading"
+                                    [class.NotShowLoading]="!showLoading"
+                                    class="center-screen"/>                   
+    <div *ngIf="userLogin; avatarUrl" class="userProfil">
+        <h2 *ngIf="userLogin"> {{ userLogin }} </h2>
+        <img *ngIf="avatarUrl" [src]="avatarUrl" alt="avatar"/>
+    </div>
+    <!-- <form (submit)="showLoading=true; getGithubInfos()">-->
+
+    <!--
+    <form (submit)="getGithubInfos(login.value)">
+        <input type="text" placeholder="Saisir login github" #login/>
+        <input type="submit"/>
+    </form> -->
+
+    <pre *ngIf="userInfos">
+        {{ userInfos | json }}
+    </pre>
+</main>

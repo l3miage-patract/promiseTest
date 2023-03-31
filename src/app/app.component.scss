@@ -1,0 +1,38 @@
+.showLoading {
+    display: true;
+}
+
+.NotShowLoading {
+    display: none;
+}
+
+main {
+    width: 75%;
+    margin: 0 auto;
+
+    div.banner {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .center-screen {
+        position: relative;
+        top: 45%;
+        left: 45%;
+      }
+
+    .userProfil {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        img {
+            margin-left: 50px;
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            border: 2px solid black;
+        }
+    }
+}
